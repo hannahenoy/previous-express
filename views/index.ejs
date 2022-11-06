@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="/public/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <main>
+    <section class="container">
+      <h1 class="title">Palindrome Finder</h1>
+
+      <p>
+        <b>/palənˌdrōm/</b><br>
+        a word, phrase, or sequence that reads the same backward as forward
+      </p>
+
+      <br>
+
+      <form action="/userWord" method="post">
+        <label for="word"></label>
+        <input type="text" placeholder="e.g. hannah" name="word">
+        <button>Submit</button>
+      </form>
+
+      <ul class="messages">
+        <% for(var i=0; i<palindrome.length; i++) {%>
+          <% let color = palindrome[i].outcome === 'is a palindrome' ? 'green' : 'blue' %>
+          <li class="message">
+            <span id="<%= color %>"><%= palindrome[i].word %></span>
+            <span><%= palindrome[i].outcome %></span>
+            <span><i class="fa fa-trash"></i></span>
+          </li>
+          <% } %>
+      </ul>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+background: -webkit-linear-gradient(rgb(207, 207, 207), rgb(246, 201, 248));
+height: 800px;
+}
+
+
+main {
+  width: 50%;
+  margin: 0 25%;
+  /* font-size: 24px; */
+  text-align: center;
+  color: white;
+  font-family: Noto Sans Mono, Helvetica, sans-serif;
+}
+.title{
+  font-size: 38px;
+  color: black;
+  margin:0;
+}
+
+p{
+  margin: 10px auto;
+  font-size: 14px;
+  background: white;
+  color: black;
+  width: 60%;
+}
+
+.container {
+border: 5px solid lightgreen;
+border-radius: 30px;
+padding: 20px;
+}
+
+#green {
+  color: lightgreen;
+  background: black;
+}
+#blue {
+  color: lightcoral;
+  background: black;
+
+}
+
+ul {
+  padding: none;
+}
+
+li {
+  list-style: none;
+  color: black;
+  font-size: 14px;
+
+}
+
+input, button {
+border: none;
+border-radius: 7px;
+color: gray
+}
